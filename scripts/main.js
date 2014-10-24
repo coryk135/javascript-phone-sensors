@@ -92,7 +92,7 @@ window.onload = function() {
                         video.play();
                         demo_app();
                     
-                        compatibility.requestAnimationFrame(tick);
+                        //compatibility.requestAnimationFrame(tick);
                     }, 500);
             }, function (error) {
                 console.log('Error!', error);
