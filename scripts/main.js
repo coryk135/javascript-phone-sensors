@@ -92,7 +92,7 @@ window.onload = function() {
                         video.play();
                         demo_app();
                     
-                        //compatibility.requestAnimationFrame(tick);
+                        compatibility.requestAnimationFrame(tick);
                     }, 500);
             }, function (error) {
                 console.log('Error!', error);
@@ -127,9 +127,9 @@ window.onload = function() {
             ctx.drawImage(video, 0, 0, 640, 480);
             var imageData = ctx.getImageData(0, 0, 640, 480);
 
-            stat.start("grayscale");
-            jsfeat.imgproc.grayscale(imageData.data, 640, 480, img_u8);
-            stat.stop("grayscale");
+            // stat.start("grayscale");
+            // jsfeat.imgproc.grayscale(imageData.data, 640, 480, img_u8);
+            // stat.stop("grayscale");
 
             // render result back to canvas
             var data_u32 = new Uint32Array(imageData.data.buffer);
@@ -137,7 +137,7 @@ window.onload = function() {
             var i = img_u8.cols*img_u8.rows, pix = 0;
             while(--i >= 0) {
                 pix = img_u8.data[i];
-                data_u32[i] = alpha | (pix << 16) | (pix << 8) | pix;
+                //data_u32[i] = alpha | (pix << 16) | (pix << 8) | pix;
             }
             
             ctx.putImageData(imageData, 0, 0);
