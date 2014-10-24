@@ -1,0 +1,19 @@
+{
+  "name": "javascript-phone-sensors",
+  "version": "0.0.0",
+  "homepage": "https://github.com/coryk135/javascript-phone-sensors",
+  "authors": [
+    "Cory Kinberger <coryk135@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jsfeat": "*"
+  }
+}

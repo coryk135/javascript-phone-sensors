@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    (function(document){
+        var s = document.createElement('script');
+        var addr = document.URL.split('//')[1].split(':')[0];
+        s.src = '//' + addr + ':35729/livereload.js';
+        document.head.appendChild(s);
+    }(document));
+    </script>
+    <style>
+        html, body {
+            font-size: 64px;
+        }
+        #canvas, #webcam {
+            transform: rotateY(180deg);
+        }
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Alpha: <span id="alpha"></span></li>
+        <li>Beta: <span id="beta"></span></li>
+        <li>Gamma: <span id="gamma"></span></li>
+    </ul>
+    <video id="webcam" width="640" height="480"></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <div id="log"></div>
+
+    <!-- Scripts -->
+    <script src="bower_components/jsfeat/build/jsfeat.js"></script>
+    <script type="text/javascript" src="http://inspirit.github.io/jsfeat/js/compatibility.js"></script>
+    <script type="text/javascript" src="http://inspirit.github.io/jsfeat/js/profiler.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
